@@ -1,8 +1,17 @@
-class FlyingSuperhero(Superhero):
-    def __init__(self, name, power, origin, flight_speed):
-        super().__init__(name, power, origin)
-        self.flight_speed = flight_speed
+# Base class
+class Vehicle:
+    def move(self):
+        print("The vehicle is moving...")
 
-    def use_power(self):
-        # Polymorphism in action
-        print(f"{self.name} soars through the sky at {self.flight_speed} mph using {self.power}!")
+# Subclasses with different behaviors
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+class Boat(Vehicle):
+    def move(self):
+        print("Sailing 🚢")
